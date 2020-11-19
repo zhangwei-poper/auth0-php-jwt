@@ -98,8 +98,6 @@ abstract class OpenSSL extends BaseSigner
      */
     private function validateKey($key)
     {
-        $phpVersion8 = ((integer)explode('.', phpversion())[0] === 8);
-
         if (($this->phpVersion8 && $key === false) || (!$this->phpVersion8 && !is_resource($key))) {
             throw new InvalidArgumentException(
                 'It was not possible to parse your key, reason: ' . openssl_error_string()
