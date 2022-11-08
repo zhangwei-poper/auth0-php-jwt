@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Signer;
+namespace Auth0\Lcobucci\JWT\Signer;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -37,9 +37,9 @@ class HmacTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Signer\Key
+     * @uses Auth0\Lcobucci\JWT\Signer\Key
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::createHash
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::createHash
      */
     public function createHashMustReturnAHashAccordingWithTheAlgorithm()
     {
@@ -55,10 +55,10 @@ class HmacTest extends \PHPUnit\Framework\TestCase
      *
      * @depends createHashMustReturnAHashAccordingWithTheAlgorithm
      *
-     * @uses Lcobucci\JWT\Signer\Hmac::createHash
-     * @uses Lcobucci\JWT\Signer\Key
+     * @uses Auth0\Lcobucci\JWT\Signer\Hmac::createHash
+     * @uses Auth0\Lcobucci\JWT\Signer\Key
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::doVerify
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::doVerify
      */
     public function doVerifyShouldReturnTrueWhenExpectedHashWasCreatedWithSameInformation($expected)
     {
@@ -70,10 +70,10 @@ class HmacTest extends \PHPUnit\Framework\TestCase
      *
      * @depends createHashMustReturnAHashAccordingWithTheAlgorithm
      *
-     * @uses Lcobucci\JWT\Signer\Hmac::createHash
-     * @uses Lcobucci\JWT\Signer\Key
+     * @uses Auth0\Lcobucci\JWT\Signer\Hmac::createHash
+     * @uses Auth0\Lcobucci\JWT\Signer\Key
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::doVerify
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::doVerify
      */
     public function doVerifyShouldReturnFalseWhenExpectedHashWasNotCreatedWithSameInformation($expected)
     {
@@ -83,9 +83,9 @@ class HmacTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Signer\Key
+     * @uses Auth0\Lcobucci\JWT\Signer\Key
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::doVerify
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::doVerify
      */
     public function doVerifyShouldReturnFalseWhenExpectedHashIsNotString()
     {
@@ -95,7 +95,7 @@ class HmacTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::hashEquals
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::hashEquals
      */
     public function hashEqualsShouldReturnFalseWhenExpectedHashHasDifferentLengthThanGenerated()
     {
@@ -107,10 +107,10 @@ class HmacTest extends \PHPUnit\Framework\TestCase
      *
      * @depends createHashMustReturnAHashAccordingWithTheAlgorithm
      *
-     * @uses Lcobucci\JWT\Signer\Hmac::createHash
-     * @uses Lcobucci\JWT\Signer\Key
+     * @uses Auth0\Lcobucci\JWT\Signer\Hmac::createHash
+     * @uses Auth0\Lcobucci\JWT\Signer\Key
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::hashEquals
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::hashEquals
      */
     public function hashEqualsShouldReturnFalseWhenExpectedHashIsDifferentThanGenerated($expected)
     {
@@ -122,10 +122,10 @@ class HmacTest extends \PHPUnit\Framework\TestCase
      *
      * @depends createHashMustReturnAHashAccordingWithTheAlgorithm
      *
-     * @uses Lcobucci\JWT\Signer\Hmac::createHash
-     * @uses Lcobucci\JWT\Signer\Key
+     * @uses Auth0\Lcobucci\JWT\Signer\Hmac::createHash
+     * @uses Auth0\Lcobucci\JWT\Signer\Key
      *
-     * @covers Lcobucci\JWT\Signer\Hmac::hashEquals
+     * @covers Auth0\Lcobucci\JWT\Signer\Hmac::hashEquals
      */
     public function hashEqualsShouldReturnTrueWhenExpectedHashIsEqualsThanGenerated($expected)
     {

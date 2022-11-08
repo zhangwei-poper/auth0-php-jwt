@@ -1,11 +1,11 @@
 <?php
-namespace Lcobucci\JWT\FunctionalTests;
+namespace Auth0\Lcobucci\JWT\FunctionalTests;
 
-use Lcobucci\JWT\Signer\Ecdsa;
-use Lcobucci\JWT\Signer\Ecdsa\Sha256;
-use Lcobucci\JWT\Signer\Ecdsa\Sha384;
-use Lcobucci\JWT\Signer\Ecdsa\Sha512;
-use Lcobucci\JWT\Signer\Key;
+use Auth0\Lcobucci\JWT\Signer\Ecdsa;
+use Auth0\Lcobucci\JWT\Signer\Ecdsa\Sha256;
+use Auth0\Lcobucci\JWT\Signer\Ecdsa\Sha384;
+use Auth0\Lcobucci\JWT\Signer\Ecdsa\Sha512;
+use Auth0\Lcobucci\JWT\Signer\Key;
 use PHPUnit\Framework\TestCase;
 use const PHP_EOL;
 use function assert;
@@ -22,14 +22,14 @@ final class RFC6978VectorTest extends TestCase
      * @test
      * @dataProvider dataRFC6979
      *
-     * @covers \Lcobucci\JWT\Signer\Key
-     * @covers \Lcobucci\JWT\Signer\Ecdsa
-     * @covers \Lcobucci\JWT\Signer\Ecdsa\MultibyteStringConverter
-     * @covers \Lcobucci\JWT\Signer\Ecdsa\Sha256
-     * @covers \Lcobucci\JWT\Signer\Ecdsa\Sha384
-     * @covers \Lcobucci\JWT\Signer\Ecdsa\Sha512
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Key
+     * @covers \Auth0\Lcobucci\JWT\Signer\Ecdsa
+     * @covers \Auth0\Lcobucci\JWT\Signer\Ecdsa\MultibyteStringConverter
+     * @covers \Auth0\Lcobucci\JWT\Signer\Ecdsa\Sha256
+     * @covers \Auth0\Lcobucci\JWT\Signer\Ecdsa\Sha384
+     * @covers \Auth0\Lcobucci\JWT\Signer\Ecdsa\Sha512
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      */
     public function theVectorsFromRFC6978CanBeVerified(
         Ecdsa $signer,

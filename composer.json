@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Lcobucci\\JWT\\": "src"
+            "Auth0\\Lcobucci\\JWT\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Lcobucci\\JWT\\": [
+            "Auth0\\Lcobucci\\JWT\\": [
                 "test/unit",
                 "test/functional"
             ]

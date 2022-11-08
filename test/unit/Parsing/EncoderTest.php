@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Parsing;
+namespace Auth0\Lcobucci\JWT\Parsing;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -16,7 +16,7 @@ class EncoderTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Parsing\Encoder::jsonEncode
+     * @covers Auth0\Lcobucci\JWT\Parsing\Encoder::jsonEncode
      */
     public function jsonEncodeMustReturnAJSONString()
     {
@@ -28,7 +28,7 @@ class EncoderTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Parsing\Encoder::jsonEncode
+     * @covers Auth0\Lcobucci\JWT\Parsing\Encoder::jsonEncode
      *
      * @expectedException \RuntimeException
      */
@@ -41,7 +41,7 @@ class EncoderTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Parsing\Encoder::base64UrlEncode
+     * @covers Auth0\Lcobucci\JWT\Parsing\Encoder::base64UrlEncode
      */
     public function base64UrlEncodeMustReturnAnUrlSafeBase64()
     {

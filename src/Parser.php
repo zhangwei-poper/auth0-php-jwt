@@ -1,15 +1,15 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT;
+namespace Auth0\Lcobucci\JWT;
 
 use InvalidArgumentException;
-use Lcobucci\JWT\Claim\Factory as ClaimFactory;
-use Lcobucci\JWT\Parsing\Decoder;
+use Auth0\Lcobucci\JWT\Claim\Factory as ClaimFactory;
+use Auth0\Lcobucci\JWT\Parsing\Decoder;
 
 /**
  * This class parses the JWT strings and convert them into tokens

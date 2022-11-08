@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Signer\Rsa;
+namespace Auth0\Lcobucci\JWT\Signer\Rsa;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -16,7 +16,7 @@ class Sha384Test extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Signer\Rsa\Sha384::getAlgorithmId
+     * @covers Auth0\Lcobucci\JWT\Signer\Rsa\Sha384::getAlgorithmId
      */
     public function getAlgorithmIdMustBeCorrect()
     {
@@ -28,7 +28,7 @@ class Sha384Test extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Signer\Rsa\Sha384::getAlgorithm
+     * @covers Auth0\Lcobucci\JWT\Signer\Rsa\Sha384::getAlgorithm
      */
     public function getAlgorithmMustBeCorrect()
     {

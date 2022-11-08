@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Signer;
+namespace Auth0\Lcobucci\JWT\Signer;
 
 use org\bovigo\vfs\vfsStream;
 
@@ -33,8 +33,8 @@ class KeyTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Signer\Key::__construct
-     * @covers Lcobucci\JWT\Signer\Key::setContent
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::__construct
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::setContent
      */
     public function constructShouldConfigureContentAndPassphrase()
     {
@@ -47,9 +47,9 @@ class KeyTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Signer\Key::__construct
-     * @covers Lcobucci\JWT\Signer\Key::setContent
-     * @covers Lcobucci\JWT\Signer\Key::readFile
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::__construct
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::setContent
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::readFile
      */
     public function constructShouldBeAbleToConfigureContentFromFile()
     {
@@ -64,9 +64,9 @@ class KeyTest extends \PHPUnit\Framework\TestCase
      *
      * @expectedException \InvalidArgumentException
      *
-     * @covers Lcobucci\JWT\Signer\Key::__construct
-     * @covers Lcobucci\JWT\Signer\Key::setContent
-     * @covers Lcobucci\JWT\Signer\Key::readFile
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::__construct
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::setContent
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::readFile
      */
     public function constructShouldRaiseExceptionWhenFileDoesNotExists()
     {
@@ -78,9 +78,9 @@ class KeyTest extends \PHPUnit\Framework\TestCase
      *
      * @expectedException \InvalidArgumentException
      *
-     * @covers Lcobucci\JWT\Signer\Key::__construct
-     * @covers Lcobucci\JWT\Signer\Key::setContent
-     * @covers Lcobucci\JWT\Signer\Key::readFile
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::__construct
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::setContent
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::readFile
      */
     public function constructShouldRaiseExceptionWhenFileGetContentsFailed()
     {
@@ -90,10 +90,10 @@ class KeyTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Signer\Key::__construct
-     * @uses Lcobucci\JWT\Signer\Key::setContent
+     * @uses Auth0\Lcobucci\JWT\Signer\Key::__construct
+     * @uses Auth0\Lcobucci\JWT\Signer\Key::setContent
      *
-     * @covers Lcobucci\JWT\Signer\Key::getContent
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::getContent
      */
     public function getContentShouldReturnConfiguredData()
     {
@@ -105,10 +105,10 @@ class KeyTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Signer\Key::__construct
-     * @uses Lcobucci\JWT\Signer\Key::setContent
+     * @uses Auth0\Lcobucci\JWT\Signer\Key::__construct
+     * @uses Auth0\Lcobucci\JWT\Signer\Key::setContent
      *
-     * @covers Lcobucci\JWT\Signer\Key::getPassphrase
+     * @covers Auth0\Lcobucci\JWT\Signer\Key::getPassphrase
      */
     public function getPassphraseShouldReturnConfiguredData()
     {

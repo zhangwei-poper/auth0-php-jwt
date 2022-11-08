@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT;
+namespace Auth0\Lcobucci\JWT;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -29,7 +29,7 @@ class SignatureTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Signature::__construct
+     * @covers Auth0\Lcobucci\JWT\Signature::__construct
      */
     public function constructorMustConfigureAttributes()
     {
@@ -41,9 +41,9 @@ class SignatureTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Signature::__construct
+     * @uses Auth0\Lcobucci\JWT\Signature::__construct
      *
-     * @covers Lcobucci\JWT\Signature::__toString
+     * @covers Auth0\Lcobucci\JWT\Signature::__toString
      */
     public function toStringMustReturnTheHash()
     {
@@ -55,10 +55,10 @@ class SignatureTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Signature::__construct
-     * @uses Lcobucci\JWT\Signature::__toString
+     * @uses Auth0\Lcobucci\JWT\Signature::__construct
+     * @uses Auth0\Lcobucci\JWT\Signature::__toString
      *
-     * @covers Lcobucci\JWT\Signature::verify
+     * @covers Auth0\Lcobucci\JWT\Signature::verify
      */
     public function verifyMustReturnWhatSignerSays()
     {

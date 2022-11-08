@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Claim;
+namespace Auth0\Lcobucci\JWT\Claim;
 
-use Lcobucci\JWT\ValidationData;
+use Auth0\Lcobucci\JWT\ValidationData;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -18,13 +18,13 @@ class LesserOrEqualsToTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
-     * @uses Lcobucci\JWT\Claim\Basic::getName
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::has
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getName
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::has
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
+     * @covers Auth0\Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
      */
     public function validateShouldReturnTrueWhenValidationDontHaveTheClaim()
     {
@@ -36,16 +36,16 @@ class LesserOrEqualsToTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
-     * @uses Lcobucci\JWT\Claim\Basic::getName
-     * @uses Lcobucci\JWT\Claim\Basic::getValue
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setIssuer
-     * @uses Lcobucci\JWT\ValidationData::has
-     * @uses Lcobucci\JWT\ValidationData::get
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getName
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getValue
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setIssuer
+     * @uses Auth0\Lcobucci\JWT\ValidationData::has
+     * @uses Auth0\Lcobucci\JWT\ValidationData::get
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
+     * @covers Auth0\Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
      */
     public function validateShouldReturnTrueWhenValueIsLesserThanValidationData()
     {
@@ -60,16 +60,16 @@ class LesserOrEqualsToTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
-     * @uses Lcobucci\JWT\Claim\Basic::getName
-     * @uses Lcobucci\JWT\Claim\Basic::getValue
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setIssuer
-     * @uses Lcobucci\JWT\ValidationData::has
-     * @uses Lcobucci\JWT\ValidationData::get
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getName
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getValue
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setIssuer
+     * @uses Auth0\Lcobucci\JWT\ValidationData::has
+     * @uses Auth0\Lcobucci\JWT\ValidationData::get
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
+     * @covers Auth0\Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
      */
     public function validateShouldReturnTrueWhenValueIsEqualsToValidationData()
     {
@@ -84,16 +84,16 @@ class LesserOrEqualsToTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
-     * @uses Lcobucci\JWT\Claim\Basic::getName
-     * @uses Lcobucci\JWT\Claim\Basic::getValue
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setIssuer
-     * @uses Lcobucci\JWT\ValidationData::has
-     * @uses Lcobucci\JWT\ValidationData::get
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getName
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::getValue
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setIssuer
+     * @uses Auth0\Lcobucci\JWT\ValidationData::has
+     * @uses Auth0\Lcobucci\JWT\ValidationData::get
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
+     * @covers Auth0\Lcobucci\JWT\Claim\LesserOrEqualsTo::validate
      */
     public function validateShouldReturnFalseWhenValueIsGreaterThanValidationData()
     {

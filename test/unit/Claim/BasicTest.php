@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Claim;
+namespace Auth0\Lcobucci\JWT\Claim;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -16,7 +16,7 @@ class BasicTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\Claim\Basic::__construct
+     * @covers Auth0\Lcobucci\JWT\Claim\Basic::__construct
      */
     public function constructorShouldConfigureTheAttributes()
     {
@@ -29,9 +29,9 @@ class BasicTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
      *
-     * @covers Lcobucci\JWT\Claim\Basic::getName
+     * @covers Auth0\Lcobucci\JWT\Claim\Basic::getName
      */
     public function getNameShouldReturnTheClaimName()
     {
@@ -43,9 +43,9 @@ class BasicTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
      *
-     * @covers Lcobucci\JWT\Claim\Basic::getValue
+     * @covers Auth0\Lcobucci\JWT\Claim\Basic::getValue
      */
     public function getValueShouldReturnTheClaimValue()
     {
@@ -57,9 +57,9 @@ class BasicTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
      *
-     * @covers Lcobucci\JWT\Claim\Basic::jsonSerialize
+     * @covers Auth0\Lcobucci\JWT\Claim\Basic::jsonSerialize
      */
     public function jsonSerializeShouldReturnTheClaimValue()
     {
@@ -71,9 +71,9 @@ class BasicTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\Claim\Basic::__construct
+     * @uses Auth0\Lcobucci\JWT\Claim\Basic::__construct
      *
-     * @covers Lcobucci\JWT\Claim\Basic::__toString
+     * @covers Auth0\Lcobucci\JWT\Claim\Basic::__toString
      */
     public function toStringShouldReturnTheClaimValue()
     {

@@ -1,11 +1,11 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT;
+namespace Auth0\Lcobucci\JWT;
 
 /**
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
@@ -16,8 +16,8 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\ValidationData::__construct
-     * @covers Lcobucci\JWT\ValidationData::setCurrentTime
+     * @covers Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      */
     public function constructorShouldConfigureTheItems()
     {
@@ -30,8 +30,8 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @covers Lcobucci\JWT\ValidationData::__construct
-     * @covers Lcobucci\JWT\ValidationData::setCurrentTime
+     * @covers Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      */
     public function constructorWithLeewayShouldConfigureTheItems()
     {
@@ -46,10 +46,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
      *
      * @dataProvider claimValues
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::setId
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setId
      */
     public function setIdShouldChangeTheId($id)
     {
@@ -65,10 +65,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
      *
      * @dataProvider claimValues
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::setIssuer
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setIssuer
      */
     public function setIssuerShouldChangeTheIssuer($iss)
     {
@@ -84,10 +84,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
      *
      * @dataProvider claimValues
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::setAudience
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setAudience
      */
     public function setAudienceShouldChangeTheAudience($aud)
     {
@@ -103,10 +103,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
      *
      * @dataProvider claimValues
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::setSubject
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setSubject
      */
     public function setSubjectShouldChangeTheSubject($sub)
     {
@@ -120,10 +120,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::setCurrentTime
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      */
     public function setCurrentTimeShouldChangeTheTimeBasedValues()
     {
@@ -137,10 +137,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses   Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses   Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::setCurrentTime
+     * @covers Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      */
     public function setCurrentTimeShouldChangeTheTimeBasedValuesUsingLeeway()
     {
@@ -154,10 +154,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::has
+     * @covers Auth0\Lcobucci\JWT\ValidationData::has
      */
     public function hasShouldReturnTrueWhenItemIsNotEmpty()
     {
@@ -169,10 +169,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::has
+     * @covers Auth0\Lcobucci\JWT\ValidationData::has
      */
     public function hasShouldReturnFalseWhenItemIsEmpty()
     {
@@ -184,10 +184,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::has
+     * @covers Auth0\Lcobucci\JWT\ValidationData::has
      */
     public function hasShouldReturnFalseWhenItemIsNotDefined()
     {
@@ -199,10 +199,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::get
+     * @covers Auth0\Lcobucci\JWT\ValidationData::get
      */
     public function getShouldReturnTheItemValue()
     {
@@ -214,10 +214,10 @@ class ValidationDataTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      *
-     * @uses Lcobucci\JWT\ValidationData::__construct
-     * @uses Lcobucci\JWT\ValidationData::setCurrentTime
+     * @uses Auth0\Lcobucci\JWT\ValidationData::__construct
+     * @uses Auth0\Lcobucci\JWT\ValidationData::setCurrentTime
      *
-     * @covers Lcobucci\JWT\ValidationData::get
+     * @covers Auth0\Lcobucci\JWT\ValidationData::get
      */
     public function getShouldReturnNullWhenItemIsNotDefined()
     {

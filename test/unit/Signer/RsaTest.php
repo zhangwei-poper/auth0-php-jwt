@@ -1,8 +1,8 @@
 <?php
-namespace Lcobucci\JWT\Signer;
+namespace Auth0\Lcobucci\JWT\Signer;
 
 use InvalidArgumentException;
-use Lcobucci\JWT\Keys;
+use Auth0\Lcobucci\JWT\Keys;
 use PHPUnit\Framework\TestCase;
 use const OPENSSL_ALGO_SHA256;
 use function openssl_pkey_get_private;
@@ -17,14 +17,14 @@ final class RsaTest extends TestCase
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::createHash
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\Rsa::getKeyType
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::createHash
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::getKeyType
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
-     * @uses \Lcobucci\JWT\Signature
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signature
      */
     public function createHashShouldReturnAValidOpensslSignature()
     {
@@ -41,13 +41,13 @@ final class RsaTest extends TestCase
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::createHash
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\Rsa::getKeyType
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::createHash
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::getKeyType
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
      */
     public function createHashShouldRaiseAnExceptionWhenKeyIsInvalid()
     {
@@ -70,12 +70,12 @@ KEY;
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::createHash
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::createHash
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
      */
     public function createHashShouldRaiseAnExceptionWhenKeyIsNotParseable()
     {
@@ -90,13 +90,13 @@ KEY;
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::createHash
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\Rsa::getKeyType
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::createHash
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::getKeyType
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
      */
     public function createHashShouldRaiseAnExceptionWhenKeyTypeIsNotRsa()
     {
@@ -111,13 +111,13 @@ KEY;
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::doVerify
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\Rsa::getKeyType
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::doVerify
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::getKeyType
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
      */
     public function doVerifyShouldReturnTrueWhenSignatureIsValid()
     {
@@ -136,12 +136,12 @@ KEY;
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::doVerify
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::doVerify
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
      */
     public function doVerifyShouldRaiseAnExceptionWhenKeyIsNotParseable()
     {
@@ -156,12 +156,12 @@ KEY;
     /**
      * @test
      *
-     * @covers \Lcobucci\JWT\Signer\Rsa::doVerify
-     * @covers \Lcobucci\JWT\Signer\Rsa::validateKey
-     * @covers \Lcobucci\JWT\Signer\OpenSSL
-     * @covers \Lcobucci\JWT\Signer\BaseSigner
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::doVerify
+     * @covers \Auth0\Lcobucci\JWT\Signer\Rsa::validateKey
+     * @covers \Auth0\Lcobucci\JWT\Signer\OpenSSL
+     * @covers \Auth0\Lcobucci\JWT\Signer\BaseSigner
      *
-     * @uses \Lcobucci\JWT\Signer\Key
+     * @uses \Auth0\Lcobucci\JWT\Signer\Key
      */
     public function doVerifyShouldRaiseAnExceptionWhenKeyTypeIsNotRsa()
     {

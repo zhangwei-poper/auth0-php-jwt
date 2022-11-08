@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of Lcobucci\JWT, a simple library to handle JWT and JWS
+ * This file is part of Auth0\Lcobucci\JWT, a simple library to handle JWT and JWS
  *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  */
 
-namespace Lcobucci\JWT\Claim;
+namespace Auth0\Lcobucci\JWT\Claim;
 
-use Lcobucci\JWT\ValidationData;
+use Auth0\Lcobucci\JWT\ValidationData;
 
 /**
  * Basic interface for validatable token claims
